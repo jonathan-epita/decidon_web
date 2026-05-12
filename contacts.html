@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts | DataNexus</title>
+    <meta name="description" content="Contactez l'équipe du projet DataNexus.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            max-width: 600px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group label {
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 0.8rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(49, 151, 149, 0.2);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .info-icon {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Data<span>Nexus</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li>
+                        <a href="projet.html">Présentation du projet</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="projet.html#problematique">Problématique</a></li>
+                            <li><a href="projet.html#objectifs">Objectifs</a></li>
+                            <li><a href="projet.html#methodologie">Méthodologie générale</a></li>
+                            <li><a href="projet.html#wp">Les différents WPs</a></li>
+                            <li><a href="projet.html#calendrier">Calendrier</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="equipe.html">Équipe</a></li>
+                    <li>
+                        <a href="publications.html">Publications</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="publications.html#articles">Articles</a></li>
+                            <li><a href="publications.html#chapitres">Chapitres d’ouvrage</a></li>
+                            <li><a href="publications.html#communications">Communications</a></li>
+                            <li><a href="publications.html#posters">Posters</a></li>
+                            <li><a href="publications.html#prepublications">Prépublications</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="livrables.html">Livrables</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="livrables.html#rapports">Rapports</a></li>
+                            <li><a href="livrables.html#donnees">Jeux de données</a></li>
+                            <li><a href="livrables.html#documentation">Documentation</a></li>
+                            <li><a href="livrables.html#outils">Outils / démonstrateurs</a></li>
+                            <li><a href="livrables.html#protocoles">Protocoles / guides</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="actualites.html">Actualités</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="actualites.html#evenements">Événements</a></li>
+                            <li><a href="actualites.html#communications">Communications</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contacts.html" class="active">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Contactez-nous</h1>
+            <p>Une question sur nos données, une proposition de collaboration ? N'hésitez pas à nous écrire.</p>
+        </section>
+
+        <section class="container"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
+
+            <div class="content-block" style="margin-bottom: 0;">
+                <h2 style="margin-bottom: 2rem; border-bottom: none;">Envoyez un message</h2>
+                <form class="contact-form" action="#" method="POST"
+                    onsubmit="event.preventDefault(); alert('Le message a été envoyé (Ceci est une démo).');">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" name="name" required placeholder="Ex: Jean Dupont">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Adresse e-mail</label>
+                        <input type="email" id="email" name="email" required placeholder="jean.dupont@exemple.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Sujet</label>
+                        <input type="text" id="subject" name="subject" required placeholder="Sujet de votre message">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required
+                            placeholder="Votre message détaillé..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary"
+                        style="align-self: flex-start; border: none; font-size: 1rem; cursor: pointer;">Envoyer le
+                        message</button>
+                </form>
+            </div>
+
+            <div class="content-block" style="margin-bottom: 0; background-color: #f8fafc;">
+                <h2 style="margin-bottom: 2rem; border-bottom: none;">Informations de contact</h2>
+
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div>
+                            <h4 style="color: var(--primary-color); margin-bottom: 0.2rem;">Institut de Recherche</h4>
+                            <p style="color: var(--text-light);">118 Route de Narbonne<br>31062 Toulouse Cedex
+                                9<br>France</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">📧</div>
+                        <div>
+                            <h4 style="color: var(--primary-color); margin-bottom: 0.2rem;">Email</h4>
+                            <p style="color: var(--text-light);"><a href="mailto:contact@datanexus-project.fr"
+                                    style="color: inherit; text-decoration: none;">contact@datanexus-project.fr</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">📱</div>
+                        <div>
+                            <h4 style="color: var(--primary-color); margin-bottom: 0.2rem;">Téléphone</h4>
+                            <p style="color: var(--text-light);">+33 (0)5 61 55 66 11</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 3rem;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Laboratoires Partenaires</h3>
+                    <ul style="list-style: none; padding: 0; color: var(--text-light); line-height: 1.8;">
+                        <li>&rarr; IRIT - Université Toulouse III</li>
+                        <li>&rarr; LIRIS - INSA Lyon</li>
+                        <li>&rarr; CNRS - Délégation Occitanie Ouest</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <a href="index.html" class="logo" style="color:white;">Data<span
+                        style="color:var(--accent-color);">Nexus</span></a>
+                <p style="margin-top: 1rem;">Un projet de recherche innovant financé<br>par l'Agence Nationale de la
+                    Recherche.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Liens Rapides</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="projet.html">Présentation du Projet</a></li>
+                    <li><a href="livrables.html">Livrables</a></li>
+                    <li><a href="actualites.html">Actualités</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Recherche</h4>
+                <ul>
+                    <li><a href="equipe.html">Équipe</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Projet DataNexus. Tous droits réservés.
+        </div>
+    </footer>
+</body>
+
+</html>
